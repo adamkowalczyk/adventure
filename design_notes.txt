@@ -1,0 +1,88 @@
+
+adventure game
+
+features:
+
+
+player class. 
+enemy classes?
+inventory puzzles?
+
+use cases rather than if-else trees?
+
+make general commands usable at prompts, eg. inventory
+
+reuse Snarg dungeon? expand, make traversable
+
+TODO:
+
+draw a map with connections
+
+rooms as classes?
+
+
+make game method a loop:
+
+check player.location
+call location
+(call location.desc)
+then present prompt
+prompt uses regexp to check for a space
+text before space interpreted as a method
+check player and location for matching method
+call that method
+
+how to parse input? simple verb object model, using space to separate
+
+possible actions depend on player class and location instance
+how?
+
+check player and location for method, if not found reprompt
+otherwise call method with noun as argument?
+
+e.g. 
+
+"use dagger"
+call location.use(dagger)
+use checks player.inventory and location.inventory for argument
+if found has a set of cases for various objects, if object has no use, default case is "that does nothing"
+
+
+
+EXAMPLE CLASSES:
+
+class Player
+  inventory = []
+  health = 0
+  location = ""
+  is_alive = true
+ 
+ def player.inv
+   puts inv 
+ -------
+
+  def player.take(item)
+    if location.objecs.include?(item)
+      player.inv << location.objects.delete(item)
+  -------
+
+ class Location
+   desc = "You can see.."
+   objects = []
+   connections = [] other location names
+   ## 
+   connections could be a hash, key for locations specific name, e.g. "north", "door", value for internal location name .e.g. "kobolds room"
+   ###
+
+ def location.go(place)
+   if place = ""
+     puts connections
+   elsif location.connections.include?(place)
+     player.location = place
+   else
+     fail
+   end
+   run game
+  -----------
+
+
