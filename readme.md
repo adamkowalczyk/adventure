@@ -16,7 +16,7 @@ Rather than make each prompt for input (or turn) unique and dependent on locatio
 <h3>Features</h3>
 
 <ul>
-<li>A game method which parses user input as method calls</li>
+<li>A game method which parses user input as direct method calls</li>
 <li>Universal commands</li>
 <li>Player object with an inventory</li>
 <li>Room objects with items and connections to other rooms</li>
@@ -28,6 +28,8 @@ Rather than make each prompt for input (or turn) unique and dependent on locatio
 Run "run.rb"
 
 Read in game help with HELP command.
-Keep an eye out for location specific commands displayed in CAPS
+
+Keep an eye out for location specific commands displayed in CAPS.
+
 Enjoy!
 

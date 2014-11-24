@@ -41,9 +41,9 @@ class Player
     puts "Exits - #{@location.connections.keys.join(", ")}." unless @location.connections.empty?
   end
   
-  # change to give meaningful names. change room names? or provide secondat descriptive name?
+  # change to give meaningful names. change room names? or provide secondary descriptive name?
   def where
-    puts "Location: #{@location.name}"
+    puts "Location: #{@location.room_name}"
   end
   
   def go(input)
@@ -71,7 +71,7 @@ class Player
   end
   
   def help
-    puts "-------------------------------"
+    puts "---------------------------------------------------"
     puts "Possible commands are made up of either one or two words"
     puts "Commands are not case sensitive, but will be displayed in CAPS."
     puts "Some locations have their own commands..."
@@ -83,7 +83,7 @@ class Player
     puts '"TAKE (OBJECT) - Takes an object and puts it in your inventory.'
     puts '"GO (EXIT) - Moves you to a new location.'
     puts '"QUIT" - Ends the game!'
-    puts "-------------------------------"
+    puts "---------------------------------------------------"
   end
   
   # are Object methods also exposed?
