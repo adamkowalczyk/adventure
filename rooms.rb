@@ -21,12 +21,7 @@ class LockRoom < Room
   attr_accessor :key, :lock, :destination, :new_description
 
   def initialize(name)
-    @name  = name
-    @room_name = ""
-    @description = ""
-    @objects = []
-    @connections = {}
-    @player = nil
+    super(name)
     @key = ""
     @lock = ""
     @destination = ""
@@ -56,12 +51,7 @@ class FightRoom < Room
   attr_accessor :enemy, :new_description
   
    def initialize(name)
-    @name  = name
-    @room_name = ""
-    @description = ""
-    @objects = []
-    @connections = {}
-    @player = nil
+    super(name)
     @enemy = :""
     @new_description = ""
   end
