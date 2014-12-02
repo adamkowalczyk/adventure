@@ -51,6 +51,6 @@ $game.player.game = $game
 $game.player.location = $game.rooms["room1"]
 
 puts "Welcome #{$game.player.name}. Type HELP for commands."
-#RUN GAME METHOD
-game
+#RUN GAME ENGINE
+$game.run
 puts "YOU ARE DEAD" unless $game.player.alive 

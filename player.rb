@@ -41,7 +41,6 @@ class Player
     puts "Exits - #{@location.connections.keys.join(", ")}." unless @location.connections.empty?
   end
   
-  # change to give meaningful names. change room names? or provide secondary descriptive name?
   def where
     puts "Location: #{@location.room_name}"
   end
